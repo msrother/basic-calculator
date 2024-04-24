@@ -1,4 +1,4 @@
-?<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,40 +8,38 @@
 </head>
 <body>
     <div class="calculator">
-        <input type="text" placeholder="0" id="inputBox" readonly>        
+        <input placeholder="0" id="display" readonly>        
         <div>
-            <button class="operator">C</button>
-            <button class="operator">CE</button> 
-            <button class="operator">%</button> 
-            <button class="operator">&divide;</button> 
+            <button onclick="clearDisplay()" id="c">C</button>
+            <button onclick="deleteEntry()" id="del">DEL</button> 
+            <button onclick="addToDisplay('sqrt')" class="operator">√</button> 
+            <button onclick="addToDisplay('/') "class="operator">&divide;</button> 
         </div>
         <div>
-            <button>7</button>
-            <button>8</button> 
-            <button>9</button> 
-            <button class="operator">&times;</button> 
+            <button onclick="addToDisplay('7')">7</button>
+            <button onclick="addToDisplay('8')">8</button> 
+            <button onclick="addToDisplay('9')">9</button> 
+            <button onclick="addToDisplay('*')" class="operator">&times;</button> 
         </div>
         <div>
-            <button>4</button>
-            <button>5</button> 
-            <button>6</button> 
-            <button class="operator">-</button> 
+            <button onclick="addToDisplay('4')">4</button>
+            <button onclick="addToDisplay('5')">5</button> 
+            <button onclick="addToDisplay('6')">6</button> 
+            <button onclick="addToDisplay('-')" class="operator">-</button> 
         </div>
         <div>
-            <button>1</button>
-            <button>2</button> 
-            <button>3</button> 
-            <button class="operator">+</button> 
+            <button onclick="addToDisplay('1')">1</button>
+            <button onclick="addToDisplay('2')">2</button> 
+            <button onclick="addToDisplay('3')">3</button> 
+            <button onclick="addToDisplay('+')" class="operator">+</button> 
         </div>
         <div>
-            <button>0</button>
-            <button>.</button> 
-            <button>+/-</button> 
-            <button class="equalsButton">=</button> 
+            <button onclick="addToDisplay('0')">0</button>
+            <button onclick="addToDisplay('.')">.</button> 
+            <button onclick="invert()">+/-</button> 
+            <button onclick="calculate()" class="equalsButton">=</button> 
         </div>
     </div>
-
-
-<script src="script.js"></script>    
+    <script src="script.js"></script>    
 </body>
 </html>
